@@ -1,0 +1,23 @@
+.fuente{
+    font-family: 'Patrick Hand', cursive;
+}
+.parrafo{
+    font-family: 'Italianno', cursive;
+}
+.fondo{
+    background-color: #07A1E1;
+}
+.zoom{
+    transition: transform .2s;
+}
+.zoom:hover{
+    transform: scale(1.3);
+}
+.fondoAplicacion{
+    background-image: url('../img/dogs.jpg');
+    background-attachment: fixed;
+    height: 400px;
+}
+.fondoDos{
+    background-color: #e9e9e9;
+}
