@@ -34,12 +34,21 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 // Cada funcion de un controlador puede tener su propia ruta
+
 // Rutas de productos
+
 $routes->get('/Producto', 'ProductoController::productoView');
 $routes->post('/registrarProducto', 'ProductoController::registrarProducto');
+$routes->get('/buscarProducto', 'ProductoController::buscarProducto');
+$routes->get('/productos/eliminar/(:num)', 'ProductoController::eliminar/$1');
+
 // Rutas de formulario animales
+
 $routes->get('/Animales', 'AnimalesController::registrarAnimalView');
 $routes->post('/registrarMascota', 'AnimalesController::registrar');
+$routes->get('/buscarAnimal', 'AnimalesController::buscarAnimal');
+$routes->get('/animal/eliminar/(:num)', 'AnimalesController::eliminar/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

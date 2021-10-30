@@ -80,13 +80,13 @@
                         <br>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <button class="btn btn-primary" type="submit">Registrar Producto</button>
+                            <a class="btn btn-primary" href="<?= site_url('/buscarProducto')?>">Ver Inventario</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
     <section>
         <?php if(session('mensaje')):?>
         <!-- Modal -->

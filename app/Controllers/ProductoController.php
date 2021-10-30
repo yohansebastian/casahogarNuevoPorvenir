@@ -9,7 +9,6 @@ class ProductoController extends BaseController
         return view('registroProducto');
     }
     public function registrarProducto(){
-
         // 1. Recibir los datos del formulario
 
         $producto    = $this->request->getPost("producto");
@@ -51,17 +50,34 @@ class ProductoController extends BaseController
             $mensaje= "Falta información para la creación del producto";
             return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
         }
+    }
+    public function buscarProducto(){
+        // Necesito llamar el modelo
+        // Crear un objeto de la clase modelo
+        try {
+            $modelo = new ProductoModel();
+            $buscar = $modelo->findAll();
+            // Organizar los datos en un arreglo asociativo 
+            
+            $productos =array("productos" =>$buscar);
+            return view('listaProductos',$productos);
 
-        // 2. Construir arreglo asosiativo con los datos recibidos 
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
+        }
+    }
+    public function eliminar($idProducto){
+        try {
+            $modelo = new ProductoModel();
+            $modelo->where('p_id',$idProducto)->delete();
 
-        // $datos = array(
-        //     "producto"    => $producto,
-        //     "foto"        => $foto,
-        //     "precio"      => $precio,
-        //     "descripcion" => $descripcion,
-        //     "tipo"        => $tipo
-        // );
+            $mensaje = "Exito eliminando el producto";
+            return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
 
-        // echo var_dump($datos);
+        }catch (\Exception $error) {
+            $mensaje = $error->getMessage();
+            return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
+        }
     }
 }
