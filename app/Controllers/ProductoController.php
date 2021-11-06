@@ -80,4 +80,42 @@ class ProductoController extends BaseController
             return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
         }
     }
+    public function editar($idProducto){
+          // 1. Recibir los datos del formulario
+
+          $producto    = $this->request->getPost("producto");
+          $precio      = $this->request->getPost("precio");
+          $descripcion = $this->request->getPost("descripcion");
+
+          if($this->validate('formularioEditarProducto')){
+            
+            // Intentar conectar a la base de datos e insertar Datos
+            try {
+                // Sacarle una fotocopia de la class (Crear un objeto)
+                $modelo = new ProductoModel();
+
+                // Armo el paquete de datos a registrar
+                 $datos = array(
+                    "p_producto"    => $producto,
+                    "p_precio"      => $precio,
+                    "p_descripcion" => $descripcion
+                );
+                // Agrego los datos
+                $modelo->update($idProducto,$datos);
+
+                // Entrego una respuesta
+                $mensaje = "Exito editando el producto";
+                return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
+
+            } catch (\Exception $error) {
+                $mensaje = $error->getMessage();
+                return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
+            }
+
+        }else{
+            $mensaje= "Falta información para la edición del producto";
+            return redirect()->to(site_url('/Producto'))->with('mensaje',$mensaje);
+        }
+  
+    }
 }

@@ -43,6 +43,11 @@ class Validation
         'descripcion'   => 'required',
         'tipo'          => 'required'
     ];
+    public $formularioEditarProducto = [
+        'producto'      => 'required',
+        'precio'        => 'required',
+        'descripcion'   => 'required'
+    ];
     public $formularioAnimales = [
         'nombre'      => 'required',
         'edad'        => 'required',

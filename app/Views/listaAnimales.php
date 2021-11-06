@@ -56,7 +56,7 @@
                             <h5 class="card-title"><?= $animal["a_nombre"]?></h5>
                             <p class="card-text"><?= $animal["a_descripcion"]?><br>Edad <?= $animal["a_edad"]?></p>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#confirmacion<?= $animal["a_id"]?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#editar<?= $animal["a_id"]?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                         </div>
                     </div>
                     <section>
@@ -77,6 +77,41 @@
                                             data-bs-dismiss="modal">Cerrar</button>
                                         <a href="<?=site_url('/animal/eliminar/'.$animal["a_id"])?>" class="btn btn-danger">Aceptar</a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    <section>
+                        <div class="modal fade" id="editar<?= $animal["a_id"]?>">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header fondo text-white">
+                                        <h5 class="modal-title">Editar Animal</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-3 align-self-center">
+                                                <img src="<?= $animal["a_fotografia"]?>" alt="foto" class="img-fluid w-100">
+                                            </div>
+                                            <div class="col-9">
+                                                <form action="<?= site_url('/productos/editar/'.$animal["a_id"])?>" method="POST">
+                                                    <div class="mb-3">
+                                                        <label for="nombre">Nombre: </label>
+                                                        <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Nombre del Animal" value="<?= $animal["a_nombre"]?>">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="10"
+                                                        placeholder="Descripcion"><?= $animal["a_descripcion"]?></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                    <button class="btn btn-primary" type="submit">Editar Animal</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

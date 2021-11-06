@@ -88,4 +88,7 @@ class AnimalesController extends BaseController
             return redirect()->to(site_url('/Animales'))->with('mensaje',$mensaje);
         }
     }
+    public function editar($idAnimal){
+        echo ("Editando el animal".$idAnimal);
+    }
 }

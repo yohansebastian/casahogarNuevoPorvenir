@@ -41,6 +41,7 @@ $routes->get('/Producto', 'ProductoController::productoView');
 $routes->post('/registrarProducto', 'ProductoController::registrarProducto');
 $routes->get('/buscarProducto', 'ProductoController::buscarProducto');
 $routes->get('/productos/eliminar/(:num)', 'ProductoController::eliminar/$1');
+$routes->post('/productos/editar/(:num)', 'ProductoController::editar/$1');
 
 // Rutas de formulario animales
 
@@ -48,6 +49,7 @@ $routes->get('/Animales', 'AnimalesController::registrarAnimalView');
 $routes->post('/registrarMascota', 'AnimalesController::registrar');
 $routes->get('/buscarAnimal', 'AnimalesController::buscarAnimal');
 $routes->get('/animal/eliminar/(:num)', 'AnimalesController::eliminar/$1');
+$routes->post('/animal/editar/(:num)', 'AnimalesController::editar/$1');
 
 /*
  * --------------------------------------------------------------------
