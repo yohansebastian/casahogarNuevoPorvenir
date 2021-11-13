@@ -38,6 +38,14 @@
 						<li class="nav-item">
 							<a class="nav-link" href="<?=site_url('/Producto')?>">Registrar Productos</a>
 						</li>
+                        <li class="nav-item">
+							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
+							<a class="nav-link" href="<?=site_url('/buscarAnimal')?>">Lista de Animales</a>
+						</li>
+						<li class="nav-item">
+							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
+							<a class="nav-link" href="<?=site_url('/buscarProducto')?>">Lista de Productos</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -75,7 +83,6 @@
                             <br>
                             <div class="d-grid gap-2 col-6 mx-auto">
                                 <button class="btn btn-primary" type="submit">Registrar Animal</button>
-                                <a class="btn btn-primary" href="<?= site_url('/buscarAnimal')?>">Ver Lista Animales</a>
                             </div>
                         </form>
                     </div>
@@ -101,6 +108,42 @@
         <?php unset($_SESSION['mensaje']);?>
         <?php endif ?>
     </section>
+    <footer class="fondoDos p-5">
+
+		<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<h3 class="fw-bold">Horario de atención:</h3>
+				<p>Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p>
+				<br>
+				<h3 class="fw-bold">Dirección:</h3>
+				<p>Belén Altavista Calle 8A # 112-82 </p>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<h3 class="fw-bold">Ayudas:</h3>
+				<p>Glosario / Correo remoto  /  Monitoreo y desempeño de uso del sitio web</p>
+				<br>
+				<h3 class="fw-bold">Protección de datos:</h3>
+				<p>Protección de datos personales en el Municipio de Medellín </p>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<h1 class="fw-bold fuente"><span><i class="fas fa-paw"></i></span>Nuevo Porvenir</h1>
+				<br>
+				<i class="fab fa-facebook fa-3x"></i>
+				<i class="fab fa-instagram fa-3x"></i>
+				<i class="fab fa-youtube fa-3x"></i>
+				<br>
+				<p class="mt-4">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+				
+			</div>
+		</div>
+
+		</div>
+
+	</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>

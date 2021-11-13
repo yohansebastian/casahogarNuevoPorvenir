@@ -48,3 +48,7 @@ Options All -Indexes
 	ServerSignature Off
 # Disable server signature end
 #SetEnv CI_ENVIRONMENT development
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

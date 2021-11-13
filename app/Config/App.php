@@ -23,8 +23,8 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8081/casahogarNuevoPorvenir';
-    // public $baseURL = 'http://localhost:8080/casahogar';
+    // public $baseURL = 'http://localhost:8081/casahogarNuevoPorvenir';
+    public $baseURL = 'http://localhost:8080/casahogarNuevoPorvenir';
 
     /**
      * --------------------------------------------------------------------------
@@ -37,7 +37,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $indexPage = 'index.php';
+    public $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------

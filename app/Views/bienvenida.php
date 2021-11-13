@@ -39,6 +39,14 @@
 							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
 							<a class="nav-link" href="<?=site_url('/Producto')?>">Registrar Productos</a>
 						</li>
+						<li class="nav-item">
+							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
+							<a class="nav-link" href="<?=site_url('/buscarAnimal')?>">Lista de Animales</a>
+						</li>
+						<li class="nav-item">
+							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
+							<a class="nav-link" href="<?=site_url('/buscarProducto')?>">Lista de Productos</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -107,23 +115,33 @@
 		<div class="container mt-5">
 			<div class="row d-flex justify-content-center">
 				<div class="col col-1">
+					<a href="<?= site_url('/buscarAnimalPerro')?>">
 					<img src="<?= base_url('public/img/dog-icon.png') ?>" class="img-fluid w-100 zoom">
+					</a> 
 					<p class="fuente text-center">Perros</p>
 				</div>
 				<div class="col col-1">
-					<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/buscarAnimalGato')?>">
+						<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente text-center">Gatos</p>
 				</div>
 				<div class="col col-1">
-					<img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/buscarAnimalAve')?>">
+						<img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente text-center">Aves</p>
 				</div>
 				<div class="col col-1">
-					<img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/buscarAnimalReptil')?>">
+						<img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente text-center">reptiles</p>
 				</div>
 				<div class="col col-1">
-					<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom">
+					<a href="<?= site_url('/buscarAnimalCaballo')?>">
+						<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom">
+					</a>
 					<p class="fuente text-center">Caballos</p>
 				</div>
 			</div>

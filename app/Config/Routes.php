@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/Bienvenida', 'Home::index');
 
 // Cada funcion de un controlador puede tener su propia ruta
 
@@ -50,6 +50,18 @@ $routes->post('/registrarMascota', 'AnimalesController::registrar');
 $routes->get('/buscarAnimal', 'AnimalesController::buscarAnimal');
 $routes->get('/animal/eliminar/(:num)', 'AnimalesController::eliminar/$1');
 $routes->post('/animal/editar/(:num)', 'AnimalesController::editar/$1');
+
+// Lista por tipo de animal
+$routes->get('/buscarAnimalPerro', 'AnimalesController::buscarAnimalPerro');
+$routes->get('/buscarAnimalGato', 'AnimalesController::buscarAnimalGato');
+$routes->get('/buscarAnimalAve', 'AnimalesController::buscarAnimalAve');
+$routes->get('/buscarAnimalReptil', 'AnimalesController::buscarAnimalReptil');
+$routes->get('/buscarAnimalCaballo', 'AnimalesController::buscarAnimalCaballo');
+
+
+
+
+
 
 /*
  * --------------------------------------------------------------------
