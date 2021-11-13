@@ -33,11 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?=site_url('/Animales')?>">Registro
+                            <a class="nav-link " aria-current="page" href="<?=site_url('/Animales')?>">Registro
                                 Animales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?=site_url('/Producto')?>">Registrar Productos</a>
+                            <a class="nav-link active" href="<?=site_url('/Producto')?>">Registrar Productos</a>
                         </li>
                         <li class="nav-item">
 							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
@@ -58,7 +58,7 @@
         <div class="container mb-5">
             <div class="row mt-5">
                 <div class="col-md-6 mt-5 align-self-center">
-                    <img src="<?= base_url('public/img/mascotasmayoristas.jpg') ?>" class="img-fluid w-100 rounded">
+                    <img src="<?= base_url('public/img/registroproducto.jpg') ?>" class="img-fluid w-100 rounded">
                 </div>
                 <div class="col-12 col-md-6">
                     <h1 class="fw-bold fuente"><span><i class="fas fa-paw"></i></span> Registro de Productos</h1>
@@ -87,7 +87,7 @@
                         </select>
                         <br>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button class="btn btn-primary" type="submit">Registrar Producto</button>
+                            <button class="btn btn-guardar" type="submit">Registrar Producto</button>
                         </div>
                     </form>
                 </div>

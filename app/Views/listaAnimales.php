@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('public/styles/estilos.css') ?>">
+
 </head>
 
 <body>
@@ -33,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?=site_url('/Animales')?>">Registro
+                            <a class="nav-link " aria-current="page" href="<?=site_url('/Animales')?>">Registro
                                 Animales</a>
                         </li>
                         <li class="nav-item">
@@ -42,7 +43,7 @@
                         </li>
                         <li class="nav-item">
 							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
-							<a class="nav-link" href="<?=site_url('/buscarAnimal')?>">Lista de Animales</a>
+							<a class="nav-link active" href="<?=site_url('/buscarAnimal')?>">Lista de Animales</a>
 						</li>
 						<li class="nav-item">
 							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
@@ -53,18 +54,22 @@
             </div>
         </nav>
     </header>
-    <main>
+
+    <main class="mb-4">
         <div class="container">
-            <div class="row row-cols1 row-cols-md5 g4">
+
+            <h1 class="my-4">Animales</h1>
+
+            <div class="row row-cols-1 row-cols-md-5 g-4">
                 <?php foreach ($animales as $animal) :?>
                 <div class="col">
                     <div class="card h-100 p-3">
-                        <img src="<?= $animal["a_fotografia"]?>" class="card-img-top h-100" alt="foto">
+                        <img src="<?= $animal["a_fotografia"]?>" class="card-img-top fotop" alt="foto">
                         <div class="card-body">
                             <h5 class="card-title"><?= $animal["a_nombre"]?></h5>
                             <p class="card-text"><?= $animal["a_descripcion"]?><br>Edad <?= $animal["a_edad"]?></p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#confirmacion<?= $animal["a_id"]?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#editar<?= $animal["a_id"]?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#confirmacion<?= $animal["a_id"]?>" class="btncard_action delete"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#editar<?= $animal["a_id"]?>" class="btncard_action"><i class="fas fa-edit"></i></a>
                         </div>
                     </div>
                     <section>
@@ -103,7 +108,7 @@
                                                 <img src="<?= $animal["a_fotografia"]?>" alt="foto" class="img-fluid w-100">
                                             </div>
                                             <div class="col-9">
-                                                <form action="<?= site_url('/productos/editar/'.$animal["a_id"])?>" method="POST">
+                                                <form action="<?= site_url('/animal/editar/'.$animal["a_id"])?>" method="POST">
                                                     <div class="mb-3">
                                                         <label for="nombre">Nombre: </label>
                                                         <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Nombre del Animal" value="<?= $animal["a_nombre"]?>">
@@ -129,6 +134,9 @@
             </div>
         </div>
     </main>
+
+
+
     <footer class="fondoDos p-5">
 
 		<div class="container-fluid">

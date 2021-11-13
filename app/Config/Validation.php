@@ -48,13 +48,18 @@ class Validation
         'precio'        => 'required',
         'descripcion'   => 'required'
     ];
+    public $formularioEditarAnimal = [
+        'nombre'      => 'required',
+        'descripcion'   => 'required'
+    ];
     public $formularioAnimales = [
         'nombre'      => 'required',
         'edad'        => 'required',
-        'fotografia'  => 'required',
+        'fotografia'  => 'requir    ed',
         'descripcion' => 'required',
         'tipo'        => 'required'
     ];
+
 
     //--------------------------------------------------------------------
     // Rules

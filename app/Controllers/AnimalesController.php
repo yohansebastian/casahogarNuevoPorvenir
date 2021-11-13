@@ -89,7 +89,40 @@ class AnimalesController extends BaseController
         }
     }
     public function editar($idAnimal){
-        echo ("Editando el animal".$idAnimal);
+        // 1. Recibir los datos del formulario
+
+        $nombre    = $this->request->getPost("nombre");
+        $descripcion = $this->request->getPost("descripcion");
+
+        if($this->validate('formularioEditarAnimal')){
+          
+          // Intentar conectar a la base de datos e insertar Datos
+          try {
+              // Sacarle una fotocopia de la class (Crear un objeto)
+              $modelo = new AnimalModel();
+
+              // Armo el paquete de datos a registrar
+               $datos = array(
+                  "a_nombre"    => $nombre,
+                  "a_descripcion" => $descripcion
+              );
+              // Agrego los datos
+              $modelo->update($idAnimal,$datos);
+
+              // Entrego una respuesta
+              $mensaje = "Exito editando el animal";
+              return redirect()->to(site_url('/Animales'))->with('mensaje',$mensaje);
+
+          } catch (\Exception $error) {
+              $mensaje = $error->getMessage();
+              return redirect()->to(site_url('/Animales'))->with('mensaje',$mensaje);
+          }
+
+      }else{
+          $mensaje= "Falta información para la edición del Animal";
+          return redirect()->to(site_url('/Animales'))->with('mensaje',$mensaje);
+      }
+
     }
     public function buscarAnimalPerro(){
         try {

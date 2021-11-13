@@ -36,7 +36,7 @@
 							<a class="nav-link active" aria-current="page" href="<?=site_url('/Animales')?>">Registro Animales</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?=site_url('/Producto')?>">Registrar Productos</a>
+							<a class="nav-link " href="<?=site_url('/Producto')?>">Registrar Productos</a>
 						</li>
                         <li class="nav-item">
 							<!-- <a class="nav-link" href="Producto">Registrar Productos</a> -->
@@ -50,12 +50,13 @@
 				</div>
 			</div>
 		</nav>
-	</header>
+</header>
+
         <section>
             <div class="container mb-5">
                 <div class="row mt-5">
                     <div class="col-6 align-self-center">
-                        <img src="<?= base_url('public/img/tipoMascotas.jpg') ?>" class="img-fluid w-100 rounded">
+                        <img src="<?= base_url('public/img/registroanimal.jpg') ?>" class="img-fluid w-100 rounded">
                     </div>
                     <div class="col-12 col-md-6">
                         <h1 class="fw-bold fuente"><span><i class="fas fa-paw"></i></span> Registro de Animales</h1>
@@ -82,13 +83,14 @@
                             </select>
                             <br>
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <button class="btn btn-primary" type="submit">Registrar Animal</button>
+                                <button class="btn btn-guardar" type="submit">Registrar Animal</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+
         <section>
         <?php if(session('mensaje')):?>
         <!-- Modal -->

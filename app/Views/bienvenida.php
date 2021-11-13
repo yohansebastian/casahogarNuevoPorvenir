@@ -15,6 +15,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?= base_url('public/styles/estilos.css') ?>">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,6 +57,7 @@
 			</div>
 		</nav>
 	</header>
+
 	<section>
 		<div class="container mt-5">
 			<div class="row">
@@ -66,14 +72,14 @@
 								aria-label="Slide 3"></button>
 						</div>
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img src="<?= base_url('public/img/imagen1.jpg') ?>" class="d-block w-100" alt="foto1">
+							<div class="carousel-item active tam">
+								<img src="<?= base_url('public/img/burro.jpg') ?>" class="d-block w-100 tam" alt="foto1">
 							</div>
-							<div class="carousel-item">
-								<img src="<?= base_url('public/img/imagen2.jpg') ?>" class="d-block w-100" alt="foto2">
+							<div class="carousel-item tam">
+								<img src="<?= base_url('public/img/burro2.jpg') ?>" class="d-block w-100 tam" alt="foto2">
 							</div>
-							<div class="carousel-item">
-								<img src="<?= base_url('public/img/imagen3.jpg') ?>" class="d-block w-100" alt="foto3">
+							<div class="carousel-item tam">
+								<img src="<?= base_url('public/img/perro.jpg') ?>" class="d-block w-100 tam" alt="foto3">
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -113,34 +119,34 @@
 	</section>
 	<section>
 		<div class="container mt-5">
-			<div class="row d-flex justify-content-center">
+			<div class="row d-flex justify-content-center align-items-end">
 				<div class="col col-1">
 					<a href="<?= site_url('/buscarAnimalPerro')?>">
-					<img src="<?= base_url('public/img/dog-icon.png') ?>" class="img-fluid w-100 zoom">
+					<img src="<?= base_url('public/img/perro-i.png') ?>" class="img-fluid w-100 zoom">
 					</a> 
 					<p class="fuente text-center">Perros</p>
 				</div>
 				<div class="col col-1">
 					<a href="<?= site_url('/buscarAnimalGato')?>">
-						<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom">
+						<img src="<?= base_url('public/img/gatito-i.png') ?>" class="img-fluid w-100 zoom">
 					</a>
 					<p class="fuente text-center">Gatos</p>
 				</div>
 				<div class="col col-1">
 					<a href="<?= site_url('/buscarAnimalAve')?>">
-						<img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom">
+						<img src="<?= base_url('public/img/buho-i.png') ?>" class="img-fluid w-100 zoom">
 					</a>
 					<p class="fuente text-center">Aves</p>
 				</div>
 				<div class="col col-1">
 					<a href="<?= site_url('/buscarAnimalReptil')?>">
-						<img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom">
+						<img src="<?= base_url('public/img/reptiles-i.png') ?>" class="img-fluid w-100 zoom">
 					</a>
 					<p class="fuente text-center">reptiles</p>
 				</div>
 				<div class="col col-1">
 					<a href="<?= site_url('/buscarAnimalCaballo')?>">
-						<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom">
+						<img src="<?= base_url('public/img/caballo-i.png') ?>" class="img-fluid w-100 zoom">
 					</a>
 					<p class="fuente text-center">Caballos</p>
 				</div>
@@ -165,7 +171,10 @@
 			</div>
 		</div>
 	</section>
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<a href="https://web.whatsapp.com/" class="float" target="_blank">
+	<i class="fa fa-whatsapp my-float"></i>
+</a>
 	<footer class="fondoDos p-5">
 
 		<div class="container-fluid">
@@ -190,9 +199,11 @@
 			<div class="col-12 col-md-4">
 				<h1 class="fw-bold fuente"><span><i class="fas fa-paw"></i></span>Nuevo Porvenir</h1>
 				<br>
-				<i class="fab fa-facebook fa-3x"></i>
-				<i class="fab fa-instagram fa-3x"></i>
-				<i class="fab fa-youtube fa-3x"></i>
+				<a href="https://www.facebook.com/"><i class="fab fa-facebook fa-3x"></i></a>
+				<a href="https://www.instagram.com/"><i class="fab fa-instagram fa-3x"></i></i></a>
+				<a href="https://www.youtube.com/"><i class="fab fa-youtube fa-3x"></i></i></a>
+				
+				
 				<br>
 				<p class="mt-4">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
 				
