@@ -59,8 +59,9 @@ $routes->get('/buscarAnimalReptil', 'AnimalesController::buscarAnimalReptil');
 $routes->get('/buscarAnimalCaballo', 'AnimalesController::buscarAnimalCaballo');
 
 
-
-
+// Lista de rutas API 
+$routes->get('/v1/productos', 'APIProductos::buscarProductos');
+$routes->get('/v1/productos/(:num)', 'APIProductos::buscarProducto/$1');
 
 
 /*
